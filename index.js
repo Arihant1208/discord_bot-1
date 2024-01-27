@@ -1,4 +1,5 @@
 const { Client, GatewayIntentBits } = require("discord.js");
+require("dotenv").config();
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -142,7 +143,8 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login(secrets.DISCORD_BOT_TOKEN);
+const token = process.env.DISCORD_BOT_TOKEN;
+client.login(token);
 
 // service type
 // one time only  and by one user only
