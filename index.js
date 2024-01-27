@@ -142,9 +142,7 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login(
-  "MTE5OTAyOTQ4NDgzMDA2ODgxNg.G1H5En.L7WPHM_FQ2MSYI4KgEIBi2OA366qN8W4oxqd-Q"
-);
+client.login(DISCORD_BOT_TOKEN);
 
 // service type
 // one time only  and by one user only
