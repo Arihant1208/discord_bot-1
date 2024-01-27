@@ -1,0 +1,23 @@
+console.log("hey");
+const fetch = require("node-fetch"); // Require 'node-fetch' if you are working in a Node.js environment
+
+const headers = {
+  Authorization:
+    "Basic " +
+    Buffer.from("rzp_test_MWzywZoFXYDOaM:xBdJiutm9Tx7Je1gLNaWuWRM").toString(
+      "base64"
+    ),
+};
+const url = `https://api.razorpay.com/v1/payments/${id}`;
+
+fetch(url, {
+  method: "GET",
+  headers: headers,
+})
+  .then((response) => response.json())
+  .then((data) => {
+    return data;
+  })
+  .catch((error) => {
+    return false;
+  });
