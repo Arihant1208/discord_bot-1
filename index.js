@@ -142,7 +142,7 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login(DISCORD_BOT_TOKEN);
+client.login(secrets.DISCORD_BOT_TOKEN);
 
 // service type
 // one time only  and by one user only
